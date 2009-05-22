@@ -24,7 +24,7 @@ class ApplicationController < ActionController::Base
   end
 
   def admin?
-    session[:password] == 'hcb0s'
+    session[:password] == 'zahmat1'
   end 
 
   def is_iphone?
@@ -39,7 +39,7 @@ class ApplicationController < ActionController::Base
   private
   
   def set_current_event
-    @current_event ||= Event.find_by_short_name!(request.subdomains.last)
+    @current_event ||= Event.find_by_short_name!('bcnyc4')
   end
   
 end

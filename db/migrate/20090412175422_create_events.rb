@@ -13,10 +13,10 @@ class CreateEvents < ActiveRecord::Migration
     end
     
     Event.reset_column_information
-    evt = Event.create :name=>'BarCamp Philly', 
-      :short_name=>'bcphl',
-      :image_url=>'http://www.barcampphilly.org/images/barcamp_badge_250px.png',
-      :link_url=>'http://www.barcampphilly.org/',
+    evt = Event.create :name=>'BarCampNYC4', 
+      :short_name=>'bcnyc4',
+      :image_url=>'http://images.eventbrite.com/logos/323431392.jpg',
+      :link_url=>'http://www.barcampnyc.org/',
       :primary_color=>'rgb(0, 63, 131)',
       :secondary_color=>'white',
       :tertiary_color=>'rgb(204,204,204)'
