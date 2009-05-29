@@ -7,21 +7,53 @@
     </script>
 	<%= stylesheet_link_tag "application.css", :media => "screen" %>
 	<%= yield :header %>
-	<style>
+	<style> 
 		body {
-			background-color: <%=current_event.primary_color%>;
+			background-color: #fff;
+			font-family: Arial, Helvetica, sans serif;
 		}
-	</style>
+		
+		a {
+			color: #555;
+			text-decoration: none;
+		}
+		
+		a:hover {
+			color: #333;
+		}
+		
+		ul {
+			list-style: none;
+			margin: 10px 0px 0px 0px; 			 
+		}
+		
+		li {
+			margin-right: 10px;
+			padding: 5px;
+			background-color: #ddd;
+			border: 1px solid #999;
+			width: 190px;
+			float: left;
+			text-align:center; 
+			margin-top:0px;
+		}
+		
+		li:hover {
+			background-color: #ccc;
+		}
+		
+	</style> 
 </head>
   <body>
     <div style="float:left;">
     <a href="<%=current_event.link_url%>"><img width="350px" src="<%=current_event.image_url%>" alt="<%=current_event.name%>" border="0" /></a></div>
-    <ul>
-        <li><a href="/iphone">iPhone edition</a></li>
-        <li><a href="/mobile">Mobile edition</a> (no table)</li>
-    </ul>
-    <br clear="all"/>
-	<p style="color: <%=current_event.secondary_color%>"><%= flash[:notice] %></p>
-    <%= yield %>
+		<h3 style="padding-top: 20px; margin-bottom:0px; padding-bottom:0px;">Schedule Grid - Saturday, May 30th</h3>
+		<ul> 
+			<a href="/iphone"><li>iPhone edition</li></a> 
+	    <a href="/mobile"><li>Mobile edition (no table)</li></a>
+	  </ul> 
+	  <br clear="all"/> 
+		<p style="color: white"><%= flash[:notice] %></p>
+		<%= yield %>
   </body>
 </html>
